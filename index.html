@@ -8,23 +8,72 @@
     <title>Awesome Books</title>
 </head>
 <body>
-    <section class="heading_container">
-        <h1 class="awesome">Awesome Books</h1>
-        <div class="book-list" id="book-list"></div>
-    </section>
-    <section class="form_container">
-        <div class ="line"></div>
-        <h2>Add a new book</h2>
-        <form id="book-form" class="book-form">
-            <div class="input">
-            <input type="text" name="title" id="title" placeholder="Title">
-            <input type="text" name="title" id="author" placeholder="Author">
+  <main class="main-body">
+  <header>
+    <nav>
+      <div id="itemsDiv" class="nav-items">
+       <a class="logo" href="#">Awesome Books</a>
+       <ul class="tabs">
+        <li class="tab is-active"><a data-switcher data-tab="1" >List</a></li>
+        <li class="tab"><a data-switcher data-tab="2">Add new</a></li>
+        <li class="tab"><a data-switcher data-tab="3">Contact</a></li>
+        </ul>
+ 
+      </div>
+      <div id="dateTime">
+      <span class="date"></span>
+      <span class="time"></span>
+    </div>
+    </nav>
+  </header>
+  <main>
+    <section class="pages">
+      <section class="heading_container page is-active" data-page="1">
+            <h1 class="awesome">Awesome Books</h1>
+            <div class="book-list" id="book-list"></div>
+      </section>
+      <section class="form_container page" data-page="2">            
+            <h2 class="addNew">Add a new book</h2>
+            <form id="book-form" class="book-form">
+                <div class="input">
+                <input type="text" name="title" id="title" placeholder="Title" required>
+                <input type="text" name="title" id="author" placeholder="Author" required>
+                </div>
+                <div class="books-btn-div">
+                  <button type="submit" class="book-add" id="book-add">Add</button>
+                </div>
+            </form>         
+        </section>
+        <section class="contactpage page" data-page="3">
+          <div>
+            <h2 class="contactMe">Contact information</h2>
+            <div>
+              <p class="contactP">
+                Do you have any questions or you just want to say "Hello"? <br />
+                You can reach out to us!
+              </p>
+              <ul  class="contactP">
+                <li>Our e-mail: harry-ralph@mail.com</li>
+                <li>Our phone number: +9175857587</li>
+                <li>Our address: Streetname 22, 84503 Kenya, Country</li>
+              </ul>
             </div>
-            <div class="books-btn-div">
-               <button type="submit" class="book-add" id="book-add">Add</button>
-            </div>
-        </form>         
-    </section>
+          </div>
+        </section>
+      </section> 
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="foota">
+    <div>
+      <span>Copyright ©️ 2022</span>
+      <span>&</span>
+      <span>
+        HARRY/RALPH
+      </span>
+    </div>
+  </footer>
+</main>
     <script src="/book.js"></script>    
 </body>
 </html>
